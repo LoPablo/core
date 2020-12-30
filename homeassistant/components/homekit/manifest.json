@@ -7,7 +7,8 @@
     "fnvhash==0.1.0",
     "PyQRCode==1.2.1",
     "base36==0.1.1",
-    "PyTurboJPEG==1.4.0"
+    "PyTurboJPEG==1.4.0",
+    "psutil==5.8.0"
   ],
   "dependencies": [
     "http",
