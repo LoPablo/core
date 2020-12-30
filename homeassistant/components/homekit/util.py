@@ -7,6 +7,7 @@ import os
 import re
 import secrets
 import socket
+import psutil
 
 import pyqrcode
 import voluptuous as vol
@@ -522,9 +523,4 @@ def find_next_available_port(start_port: int):
 
 def pid_is_alive(pid):
     """Check to see if a process is alive."""
-    try:
-        os.kill(pid, 0)
-        return True
-    except OSError:
-        pass
-    return False
+    return psutil.pid_exists(pid)
